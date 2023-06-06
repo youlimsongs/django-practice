@@ -61,3 +61,8 @@ def delete_todo(request, pk):
 	delTodo.delete()
 	return redirect('todos')
 
+def complete_todo(request,pk):
+    curTodo = get_object_or_404(TodoList, pk=pk)
+    curTodo.complete =True
+    curTodo.save()
+    return redirect('todos')
