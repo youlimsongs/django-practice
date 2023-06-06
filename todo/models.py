@@ -8,4 +8,4 @@ class TodoList(models.Model):
 	complete = models.BooleanField(default=False)
 
 	def __str__(self):
-		return f'{self.todo} [{self.id}]'
+		return self.todos
